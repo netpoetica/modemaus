@@ -51,23 +51,21 @@ var Search = (function(){
                         }
                 }
         }
-
+        
+        //console.log(root);
+        //console.log(scale);
+        Fretboard.update(root, scale);
+        
         //show the search history div, and add a new search to it
-        if(ChromaticScaleVO[root]){
-                root = ChromaticScaleVO[root];
-        }
-        if(ModesVO[scale].name){
-                scale = ModesVO[scale].name;
-        }
         if(!bPreventAddToHistory){
                 var history = $("#searchHistory");
                 history.slideDown('slow');
-                $("<span class = '.prevSearch'><input type='button' value='" + root + " " + scale + "' /></span>")
-                .appendTo(history)
-                .bind("click", function(){
-                                searchScales($(this).find('input').val(), true);
-                });
+                $("<span class = '.prevSearch'><input type='button' value='" + ChromaticScaleVO[root] + " " + ModesVO[scale].name + "' /></span>")
+                .on("click", function(){
+                                Search(sSearchParam, true);
+                })
+                .appendTo(history);
         }
-        Fretboard.update(root, scale);
+        
     }
 }());
