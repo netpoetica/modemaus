@@ -1,0 +1,33 @@
+div#selectorPanel
+    h1#logo
+        span
+            MODEMAUS
+    form#selectorForm.round
+        div
+            label(for="root") Select your root note:
+            select#root(name="root")
+                -each note, index in chromaticScale
+                    option(value=index)= note
+        div
+            label(for="scale") Select your mode/scale:
+            select#scale(name="scale")
+                - each mode, index in modes
+                    option(value=index)= mode.name
+
+        div
+            input#submit(type = "submit", name="submit",value = "Find your notes!")
+
+    form#fmSearch.round(action="#")
+        div
+            p Alternatively, you can search for a scale by name:
+            label(for="txtSearch") Search
+            input#txtSearch.round(type="search", name='txtSearch', autocomplete="off")
+            p Type in the root note and name of the scale to search for it, i.e. "E phrygian"
+            input#btnSearch(type="submit",name='btnSearch', value='Search')
+            div#searchHistory.round
+                h3 Search History
+
+    div.fb-like-box(data-href="http://www.facebook.com/pages/Modemaus/135665956536360", data-width="215", data-show-faces="true", data-stream="false", data-header="true")
+    script(type="text/javascript", src="https://apis.google.com/js/plusone.js")
+    div.google-plus
+        div.g-plusone(data-size="standard", data-count="true")

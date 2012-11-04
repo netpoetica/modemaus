@@ -1,6 +1,10 @@
 
 /**
  * Module dependencies.
+ * http://expressjs.com/api.html
+ * https://github.com/visionmedia/express/
+ * http://jade-lang.com/
+ * https://github.com/visionmedia/jade
  */
 
 var express = require('express')
@@ -30,8 +34,8 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
-//app.get('/root/:root', routes.root);
-//app.get('/root/:root/scale/:scale', routes.scale);
+app.get('/root/:root', routes.root);
+app.get('/root/:root/scale/:scale', routes.scale);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
