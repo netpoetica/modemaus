@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "express": "*",
-    "ejs": "*",
+    "jade": "*",
     "stylus": "*"
   }
 }

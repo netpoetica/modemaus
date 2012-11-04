@@ -1,0 +1,106 @@
+extends layout
+
+block content
+    div#content
+        div#selectorPanel
+            h1#logo
+                span
+                    MODEMAUS
+            form#selectorForm.round
+                div
+                    label(for="root") Select your root note:
+                    select#root(name="root")
+                        option(value="0") C
+                        option(value="1") C#/Db
+                        option(value="2") D
+                        option(value="3") D#/Eb
+                        option(value="4") E
+                        option(value="5") F
+                        option(value="6") F#/Gb
+                        option(value="7") G
+                        option(value="8") G#/Ab
+                        option(value="9") A
+                        option(value="10") A#/Bb
+                        option(value="11") B
+                div
+                    label(for="scale") Select your mode/scale:
+                    select#scale(name="scale")
+                        option(value = "0") Ionian/Major
+                        option(value = "1") Dorian
+                        option(value = "2") Phrygian
+                        option(value = "3") Lydian
+                        option(value = "4") Mixolydian
+                        option(value = "5") Aeolian/Minor
+                        option(value = "6") Locrian
+
+                div
+                    input#submit(type = "submit", name="submit",value = "Find your notes!")
+
+            form#fmSearch.round(action="#")
+                div
+                    p Alternatively, you can search for a scale by name:
+                    label(for="txtSearch") Search
+                    input#txtSearch.round(type="search", name='txtSearch', autocomplete="off")
+                    p Type in the root note and name of the scale to search for it, i.e. "E phrygian"
+                    input#btnSearch(type="submit",name='btnSearch', value='Search')
+                    div#searchHistory.round
+                        h3 Search History
+
+            div.fb-like-box(data-href="http://www.facebook.com/pages/Modemaus/135665956536360", data-width="215", data-show-faces="true", data-stream="false", data-header="true")
+            script(type="text/javascript", src="https://apis.google.com/js/plusone.js")
+            div.google-plus
+                div.g-plusone(data-size="standard", data-count="true")
+
+        div#modePanel	
+            div#contentHeader.round
+                h1 Modemaus
+                p Scales, Modes, and Keys at the touch of your fingertips!
+
+            div#fretboardContainer.round
+                div#legendContainer
+                    p Legend/Color Guide
+                    ul
+                        li.rootOnFretboard.round
+                            Root Note
+                        li.fourthOnFretboard.round
+                            Fourth Note
+                        li.fifthOnFretboard.round
+                            Fifth Note
+                        li.noteOnFretboard.round
+                            Other Notes
+
+                table#fretboard
+
+            div#outputPanel.round
+                h2 Notes and Related Chords
+            h3 Hope you'll find this as useful as I do!
+            p
+                |It's pretty hard to memorize all of these modes, but it is absolutely 
+                |essential for improving your ability to decorate and harmonize other musicians, 
+                |to create unique and original progressions, and to be able to express yourself 
+                |efficiently. I love the modes, and I wanted to create something that
+                |other aspiring musicians/guitar players might find useful. Instead of turning 
+                |pages, reading notes and tabs, it's all collected right here in a very simple 
+                |interface! I'd love 
+                |to 
+                a(href="mailto:kthrose@modemaus.net")
+                    hear some feedback and suggestions!
+
+            h4 What's new in version 3?
+            p
+                |So this is version 3! This version is much more cross-browser compatible, significantly faster, and much more user friendly.
+                |I've added a Search feature that lets you search for scales, and save your searches with the ability to return to them
+                |at a later point. I'm very excited about this release! Version 4 is already in the works, and will include some great design and
+                |color palette changes that will make this app much more user-friendly, and in the future this will be coded with support for
+                |people who don't have JavaScript.
+            p Some of the ideas I'm planning for in the future are:
+            ul
+                li
+                    To add audio
+                li
+                    To add in the theoretical modes like FbM
+                li
+                    Improve the user interface!
+                li
+                    Add more instruments - piano, bass
+            p Enjoy! Hope this helps you learn the modes
