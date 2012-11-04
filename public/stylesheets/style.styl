@@ -1,5 +1,200 @@
+/*
+ *		CSS by Keith Rosenberg
+ *	http://www.keithrosenberg.com
+ *		kthrose@netpoetica.com
+ */
+// GENERAL STYLES
 body
-  padding: 50px
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
+    background-color: #f2f5f7
+    color: #362b36
+    font-family: Lucida Grande, Lucida Sans, Arial, sans-serif; font-size: 1.1em
+    margin: 0px
+    padding: 0px
+
+.round
+    -moz-border-radius: 15px
+    -webkit-border-radius: 15px
+    border-radius: 15px       
+    -moz-background-clip: padding
+    -webkit-background-clip: padding-box
+    background-clip: padding-box
+
+// ANCHOR STYLES
 a
-  color: #00B7FF
+    text-decoration: none
+    color: orange
+
+a:hover
+    text-decoration: underline
+
+
+#logo
+    background: url("../images/modemaus-logo.jpg") no-repeat
+    height: 50px
+    width: 215px
+
+#logo span
+    display:none
+
+#selectorPanel
+    padding: 10px
+    width: 215px
+    height: 100%
+    float: left
+    text-align: right
+    background-color: #deedf7
+
+// SELECTOR PANEL FORM STYLES
+#selectorForm
+    background-color: #FFFFFF
+    padding: 10px
+
+#selectorForm p
+    font-size: small
+
+// SEARCH FORM STYLES
+#fmSearch
+    background-color: #FFFFFF
+    padding: 10px
+    font-size: small
+
+#txtSearch
+    background-color: #FFAAAA
+
+#searchHistory
+    background-color: white
+    display: none
+    text-align: left
+    padding: 20px
+
+// Right Column, the Mode Panel or Work Panel
+#modePanel
+    background-color: #f2f5f7
+    width: 800px
+    padding: 20px
+    height: auto
+    float: left
+
+// LEGEND STYLES
+#legendContainer
+    float: left
+    padding: 10px
+
+#legendContainer ul
+    list-style-type: none
+
+#legendContainer li
+    font-size: small
+    padding: 8px
+    background-color: #F2994B
+    width: 50px
+    float: left
+
+// OUTPUT PANEL STYLES
+#outputPanel
+    clear: both
+
+
+// CONTENT HEADER STYLES
+#contentHeader
+    background-color: #deedf7
+    width: 250px
+    padding: 20px
+
+// FRETBOARD STYLES
+/* 	
+ *   Fretboard Palette by carlos, at Adobe Kuler 
+ *   URL: http://kuler.adobe.com/#themeID/145161
+ *   Palette:
+ *           Golden Brown 	- #F2CA52
+ *           Dim Brown 		- #F2BA52
+ *           Middle Brown 	- #F2994B
+ *           Dark Brown 		- #D96236
+ *           Fret Gray 		- #F2F2F2
+ */
+#fretboardContainer
+    float: left
+    padding: 20px
+    background-color: #deedf7
+    margin-bottom: 20px
+
+#fretboardContainer h1
+    float: left
+    display: inline
+
+#fretboard tr
+    height: 20px
+    width: 60%
+    margin: 0px
+    padding: 0px
+    border: none
+    clear: both
+
+#fretboard th
+    background-color: #F2F2F2 
+    color: #000000
+    font-weight: bold
+    border: none
+
+#fretboard td
+    height: 20px
+    background-color: #F2994B
+    width: 60px
+    border-right: 2px solid #F2F2F2
+    margin: 0px
+    text-align: center
+
+#fretboard td:first-child
+    border-right: 8px solid #F2CA52
+    color: #D96236
+    background-color: #F2BA52
+    font-weight: bold
+
+.rootOnFretboard
+    color: yellow
+
+.fourthOnFretboard
+    color: red
+
+.fifthOnFretboard
+    color: #E21659
+
+.noteOnFretboard
+    color: #fff
+
+.notOnFretboard
+    color: #F2BA52
+
+#fretboard #string5, #fretboard #string4
+    text-transform: lowercase
+// END FRETBOARD STYLES
+
+
+// OUTPUT PANEL STYLES
+#outputPanel
+    background-color: #D96236
+    color: #F2BA52
+    width: 410px
+    padding-left: 50px
+    padding-bottom: 50px
+    padding-top: 10px
+
+.scaleDegree
+    width: 100px
+    padding: 10px
+    text-align: center
+    background-color: #F2994B
+    border: 2px solid #F2BA52
+
+.relatedChords
+    width: 200px
+    padding: 10px
+    background-color: #F2994B
+    border: 2px solid #F2BA52
+
+
+// SOCIAL MEDIA PLUGIN STYLES
+.fb-like-box
+    padding-top: 20px
+.google-plus
+    padding-top: 20px
