@@ -1,0 +1,13 @@
+html
+    include includes/header
+        
+    body
+        div#fb-root
+
+        div#content
+            include includes/ui
+            block content
+        
+        script(type='text/javascript', src='/javascripts/Facebook.js')
+        script(type="text/javascript", src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js")
+    

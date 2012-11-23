@@ -1,1 +1,18 @@
 table#fretboard
+    each note, z in chromaticScale
+        th #{z}
+    - for(var i = 0, ii = 6; i < ii; i++)
+        tr 
+            - for(var j = 0, jj = tuning.chromaticNumbering[i]; j < 12; j++)
+                - if (chromaticScale[jj] == data.scale[0])
+                    td.rootOnFretboard #{chromaticScale[jj]}
+                - else if (chromaticScale[jj] == data.scale[3])
+                    td.fourthOnFretboard #{chromaticScale[jj]}
+                - else if (chromaticScale[jj] == data.scale[4])
+                    td.fifthOnFretboard #{chromaticScale[jj]}
+                -else
+                    td.noteOnFretboard #{chromaticScale[jj]}
+                - if(jj >= 11)
+                    - jj -= 11;
+                - else
+                    -jj++;
