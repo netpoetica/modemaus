@@ -70,5 +70,11 @@ exports.root = function(req, res){
  * GET scale page.
  */
 exports.scale = function(req, res){
-  res.render('root/scale/scale', { title: 'Modemaus.net - ' + req.params.root + ' ' + req.params.scale, modes: Modes, chromaticScale: ChromaticScale, root: req.params.root, scale: req.params.scale });
+    
+    
+    
+    res.render('root/scale/scale', {   
+        title: 'Modemaus.net - ' + req.params.root + ' ' + req.params.scale, 
+        data: Build(req.params.root, req.params.scale)
+    });
 };
