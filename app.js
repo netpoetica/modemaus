@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  * http://expressjs.com/api.html
@@ -24,18 +23,17 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(express.cookieParser('your secret here'));
   app.use(express.session());
-  app.use(app.router);
   app.use(require('stylus').middleware(__dirname + '/public'));
-  app.use(express.static(path.join(__dirname, 'public')));
+  app.use(express.static(path.join(__dirname, '/public')));
+  app.use(app.router);
 });
 
 app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
+app.get('/:root/:scale', routes.scale);
 app.get('/', routes.index);
-app.get('/root/:root', routes.root);
-app.get('/root/:root/scale/:scale', routes.scale);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

@@ -7,7 +7,7 @@ div#selectorPanel
             label(for="root") Select your root note:
             select#root(name="root")
                 -each note, index in chromaticScale
-                    - if(data.root ===  note)
+                    - if(data && data.root ===  note)
                         option(value=index, selected)= note
                     - else
                         option(value=index)= note
@@ -15,7 +15,7 @@ div#selectorPanel
             label(for="scale") Select your mode/scale:
             select#scale(name="scale")
                 - each mode, index in modes
-                    - if(data.name === mode.name)
+                    - if(data && data.name === mode.name)
                         option(value=index, selected)= mode.name
                     - else
                         option(value=index)= mode.name
