@@ -1,17 +1,20 @@
-/**
- * Module dependencies.
- * http://expressjs.com/api.html
- * https://github.com/visionmedia/express/
- * http://jade-lang.com/
- * https://github.com/visionmedia/jade
+/*
+ * Modemaus
+ * http://www.modemaus.net
+ *
+ * Copyright (c) 2011 "netpoetica" Keith Rosenberg
+ *
  */
 
-var express = require('express')
-  , routes = require('./routes')
-  , http = require('http')
-  , path = require('path');
+'use strict';
 
-var app = express();
+var express = require('express'),
+    routes = require('./routes'),
+    http = require('http'),
+    path = require('path'),
+    app;
+
+app = express();
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
@@ -19,7 +22,6 @@ app.configure(function(){
   app.set('view engine', 'jade');
   app.use(express.favicon());
   app.use(express.logger('dev'));
-  //app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(express.cookieParser('your secret here'));
   app.use(express.session());

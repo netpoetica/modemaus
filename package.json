@@ -1,13 +1,21 @@
 {
-  "name": "application-name",
+  "name": "modemaus",
   "version": "0.0.1",
-  "private": true,
+  "author": "netpoetica <kthrose@netpoetica.com>",
   "scripts": {
+    "test": "node test/index.js",
     "start": "node app"
   },
   "dependencies": {
     "express": "*",
     "jade": "*",
     "stylus": "*"
+  },
+  "devDependencies": {
+    "tape": "~1.1.0"
+  },
+  "repository"  : {
+    "type": "git",
+    "url" : "https://github.com/netpoetica/modemaus"
   }
 }
