@@ -4,7 +4,7 @@
   "author": "netpoetica <kthrose@netpoetica.com>",
   "scripts": {
     "test": "node test/index.js",
-    "start": "node app"
+    "start": "node modemaus"
   },
   "dependencies": {
     "express": "*",
